@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Preview MyPKTime</title>
+
+    <!-- Flowbite -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <!-- Flowbite -->
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+
+    <!-- FontAwesomeIcon -->
+    <script
+      src="https://kit.fontawesome.com/eccfaba240.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- FontAwesomeIcon -->
+
+    <!-- Tailwindcss -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#06b6d4",
+            },
+
+            fontFamily: {
+              poppins: "'Poppins', sans-serif",
+              sora: "'Sora', sans-serif",
+            },
+          },
+        },
+      };
+    </script>
+    <!-- Tailwindcss -->
+  </head>
+  <body>
+    <!-- navbar -->
+    <header
+      class="py-5 border-b-2 border-primary top-0 right-0 left-0 z-50 fixed items-center bg-slate-900"
+    >
+      <div class="container mx-auto">
+        <div class="w-full px-4">
+          <div class="flex items-center justify-between">
+            <a href="#" class="font-sora font-bold text-xl text-primary"
+              >MyPKTime</a
+            >
+
+            <ul class="hidden md:flex list-none items-center gap-4">
+              <li>
+                <a
+                  href="#home"
+                  class="font-sora font-normal text-base text-slate-200 hover:text-primary hover:underline hover:underline-offset-8"
+                  >Beranda</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#about"
+                  class="font-sora font-normal text-base text-slate-200 hover:text-primary hover:underline hover:underline-offset-8"
+                  >Tentang Kami</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#faq"
+                  class="font-sora font-normal text-base text-slate-200 hover:text-primary hover:underline hover:underline-offset-8"
+                  >FAQ</a
+                >
+              </li>
+            </ul>
+
+            <div class="flex items-center gap-4 md:hidden">
+              <button
+                class="text-slate-100"
+                id="dropdownDefaultButton"
+                data-dropdown-toggle="dropdown"
+              >
+                <i class="fa-solid fa-bars fa-xl"></i>
+              </button>
+            </div>
+
+            <!-- Dropdown menu -->
+            <div
+              id="dropdown"
+              class="z-10 hidden bg-slate-900 divide-y divide-gray-100 rounded-lg shadow w-44"
+            >
+              <ul
+                class="py-2 text-sm text-slate-200 font-sora font-normal"
+                aria-labelledby="dropdownDefaultButton"
+              >
+                <li>
+                  <a
+                    href="#home"
+                    class="block px-4 py-2 hover:bg-gray-600 hover:text-white"
+                    >Beranda</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#about"
+                    class="block px-4 py-2 hover:bg-gray-600 hover:text-white"
+                    >Tentang Kami</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#faq"
+                    class="block px-4 py-2 hover:bg-gray-600 hover:text-white"
+                    >FAQ</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- navbar -->
+
+    <!-- hero -->
+    <section
+      id="home"
+      class="pt-36 pb-10 bg-[url('https://smamuhpksolo.sch.id/wp-content/uploads/2022/04/1629347045936-1920x692.jpg')] bg-cover bg-center"
+    >
+      <div class="container mx-auto">
+        <div class="max-w-lg px-4">
+          <div class="mx-auto mb-10">
+            <h1 class="font-sora font-normal text-base text-slate-100">
+              Hai! Selamat Datang di website
+              <span
+                class="block my-2 font-bold text-4xl text-primary drop-shadow-md"
+                >MyPKTime</span
+              >
+            </h1>
+            <p
+              class="font-poppins font-normal text-base text-slate-100 leading-relaxed mb-6"
+            >
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore ex
+              minus aut illo exercitationem aliquid!
+            </p>
+            <button
+              type="button"
+              data-modal-target="defaultModal"
+              data-modal-toggle="defaultModal"
+              class="py-4 px-8 rounded-full bg-primary text-white font-sora font-semibold shadow-lg hover:bg-transparent backdrop-blur-[1.4px] hover:ring-2 hover:ring-primary duration-150 ease-in"
+            >
+              Daftarkan Dirimu Sekarang!
+              <span class="ml-2"
+                ><i class="fa-solid fa-arrow-right-to-bracket fa-lg"></i
+              ></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- hero -->
+
+    <!-- form daftar -->
+    <div
+      id="defaultModal"
+      tabindex="-1"
+      aria-hidden="true"
+      class="fixed top-14 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] md:h-full"
+    >
+      <div class="relative w-full h-full max-w-2xl md:h-auto">
+        <!-- Modal content -->
+        <div class="relative rounded-lg shadow bg-gray-700">
+          <!-- Modal header -->
+          <div
+            class="flex items-center justify-center p-4 border-b rounded-t border-gray-600"
+          >
+            <h3 class="text-base font-sora font-semibold text-white">
+              Isikan form berikut dengan benar
+            </h3>
+            <button
+              type="button"
+              class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
+              data-modal-hide="defaultModal"
+            >
+              <svg
+                aria-hidden="true"
+                class="w-5 h-5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <span class="sr-only">Close modal</span>
+            </button>
+          </div>
+          <!-- Modal body -->
+          <div class="grid gap-6 mb-2 p-4 md:grid-cols-2">
+            <div>
+              <label
+                for="first_name"
+                class="block mb-2 text-sm font-poppins font-medium text-white"
+                >Nama Lengkap</label
+              >
+              <input
+                type="text"
+                id="first_name"
+                class="border font-poppins text-sm rounded-lg block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-primary focus:border-primary"
+                placeholder="masukkan nama lengkapmu"
+                required
+              />
+            </div>
+            <div>
+              <label
+                for="email"
+                class="block mb-2 text-sm font-poppins font-medium text-white"
+                >Alamat Email</label
+              >
+              <input
+                type="email"
+                id="email"
+                class="border font-poppins text-sm rounded-lg block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-primary focus:border-primary"
+                placeholder="masukkan email aktif"
+                required
+              />
+            </div>
+            <div>
+              <label
+                for="kelas"
+                class="block mb-2 text-sm font-poppins font-medium text-white"
+                >Pilih Kelasmu</label
+              >
+              <select
+                id="kelas"
+                class="border font-poppins text-sm rounded-lg block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-primary focus:border-primary"
+              >
+                <option selected value="X1">X1</option>
+                <option value="X2">X2</option>
+                <option value="X3">X3</option>
+                <option value="XI MIPA 1">XI MIPA 1</option>
+                <option value="XI MIPA 2">XI MIPA 2</option>
+                <option value="XI IPS">XI IPS</option>
+                <option value="XII MIPA">XII MIPA</option>
+                <option value="XII IPS">XII IPS</option>
+              </select>
+            </div>
+            <div>
+              <label
+                for="kartu-pelajar"
+                class="block mb-2 text-sm font-poppins font-medium text-white"
+                >Pilih Tipe Kartu Pelajar</label
+              >
+              <select
+                id="kartu-pelajar"
+                class="border font-poppins text-sm rounded-lg block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-primary focus:border-primary"
+              >
+                <option selected value="IPM">IPM</option>
+                <option value="Kartu Pelajar SMA">Kartu Pelajar SMA</option>
+              </select>
+            </div>
+            <div>
+              <label
+                class="block mb-2 text-sm font-poppins font-medium text-white"
+                for="file_input"
+                >Upload foto kartu pelajar</label
+              >
+              <input
+                class="block w-full text-sm border rounded-lg cursor-pointer text-gray-400 focus:outline-none bg-gray-700 border-gray-600 placeholder-gray-400"
+                id="file_input"
+                type="file"
+              />
+            </div>
+          </div>
+          <div class="flex items-start p-4 mb-2">
+            <div class="flex items-center h-5">
+              <input
+                id="remember"
+                type="checkbox"
+                value=""
+                class="w-4 h-4 border rounded focus:ring-3 bg-gray-700 border-gray-600 focus:ring-blue-600 ring-offset-gray-800"
+                required
+              />
+            </div>
+            <label
+              for="remember"
+              class="ml-2 font-poppins text-sm font-medium text-gray-300"
+              >I agree with the
+              <a
+                href="#"
+                class="text-blue-600 hover:underline dark:text-blue-500"
+                >terms and conditions</a
+              >.</label
+            >
+          </div>
+          <!-- Modal footer -->
+          <div
+            class="flex items-center p-6 space-x-2 border-t rounded-b border-gray-600"
+          >
+            <button
+              data-modal-hide="defaultModal"
+              type="button"
+              class="text-white focus:ring-4 focus:outline-none font-sora font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-primary hover:bg-cyan-600 focus:ring-cyan-500"
+            >
+              Buat Akun
+            </button>
+            <button
+              data-modal-hide="defaultModal"
+              type="button"
+              class="focus:ring-4 focus:outline-none rounded-lg border text-sm font-sora font-medium px-5 py-2.5 focus:z-10 bg-gray-700 text-gray-300 border-gray-500 hover:text-white hover:bg-gray-600 focus:ring-gray-600"
+            >
+              Batalkan
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- form daftar -->
+
+    <!-- about -->
+    <section id="about" class="pt-36 pb-32 bg-slate-900">
+      <div class="container mx-auto">
+        <div class="w-full px-4">
+          <div class="mx-auto mb-16 text-center">
+            <h1 class="text-slate-100 font-sora font-medium text-base">
+              About
+            </h1>
+            <h1 class="text-primary font-sora font-bold text-3xl py-2">
+              Tentang Kami
+            </h1>
+            <p
+              class="text-slate-400 font-poppins font-light text-base leading-relaxed"
+            >
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea,
+              similique!
+            </p>
+          </div>
+
+          <div class="flex flex-wrap justify-between">
+            <div class="w-full mx-auto mb-10 md:w-1/2 md:text-center">
+              <h1 class="text-primary mb-2 font-sora font-semibold text-xl">
+                Apa sih MyPKTime itu?
+              </h1>
+              <p
+                class="text-slate-400 font-poppins font-light text-base leading-relaxed"
+              >
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Praesentium labore neque ut eius iusto vero? Neque
+                exercitationem corrupti deserunt quas?
+              </p>
+            </div>
+            <div class="w-full mx-auto mb-10 md:w-1/2 md:text-center">
+              <h1 class="text-primary mb-2 font-sora font-semibold text-xl">
+                Kenapa sih harus daftar di MyPKTime?
+              </h1>
+              <p
+                class="text-slate-400 font-poppins font-light text-base leading-relaxed"
+              >
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Praesentium labore neque ut eius iusto vero? Neque
+                exercitationem corrupti deserunt quas?
+              </p>
+            </div>
+
+            <div class="w-full mx-auto mb-10 md:w-1/2 md:text-center">
+              <h1 class="text-primary mb-2 font-sora font-semibold text-xl">
+                Benefitnya apa aja sih kak?
+              </h1>
+              <p
+                class="text-slate-400 font-poppins font-light text-base leading-relaxed"
+              >
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Voluptas earum eius, obcaecati minima rem quod!
+              </p>
+            </div>
+            <div class="w-full mx-auto mb-10 md:w-1/2 md:text-center">
+              <h1 class="text-primary mb-2 font-sora font-semibold text-xl">
+                Mengapa kita membuat forum MyPKTime ini?
+              </h1>
+              <p
+                class="text-slate-400 font-poppins font-light text-base leading-relaxed"
+              >
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis,
+                quisquam eveniet quos blanditiis enim illo placeat numquam
+                possimus corporis laborum, mollitia dicta eius, aliquam rem!
+              </p>
+            </div>
+          </div>
+
+          <div class="mx-auto mb-10 mt-12 text-center">
+            <h2 class="font-sora font-medium text-slate-500 text-sm mb-2">
+              Gimana? banyak bukan benefitnya?!
+            </h2>
+            <h1 class="font-sora font font-semibold text-slate-400 text-base">
+              Makanya ayo gabung jadi member sekarang juga di
+              <span class="block font-bold text-2xl text-primary mt-2 mb-10"
+                >MyPKTime</span
+              >
+            </h1>
+            <button
+              type="button"
+              data-modal-target="defaultModal"
+              data-modal-toggle="defaultModal"
+              class="py-3 px-8 bg-primary font-sora font-semibold text-white rounded-full shadow-sm shadow-primary hover:bg-transparent hover:ring-2 hover:ring-primary duration-200 ease-in"
+            >
+              Daftar Sekarang
+              <span class="ml-2"
+                ><i class="fa-solid fa-arrow-right-to-bracket fa-lg"></i
+              ></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- about -->
+
+    <!-- faq -->
+    <section id="faq" class="pt-36 pb-32 bg-gray-800">
+      <div class="container mx-auto">
+        <div class="w-full px-4">
+          <div class="mx-auto mb-10 text-center">
+            <h2 class="text-slate-400 text-base font-poppins font-normal">
+              Masih banyak yang mau ditanyain? nih liat disini
+            </h2>
+            <h1 class="text-primary font-sora font-bold text-2xl my-2">
+              Frequently Asked Question
+            </h1>
+          </div>
+
+          <div id="accordion-open" data-accordion="open">
+            <h2 id="accordion-open-heading-1">
+              <button
+                type="button"
+                class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-primary dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
+                data-accordion-target="#accordion-open-body-1"
+                aria-expanded="true"
+                aria-controls="accordion-open-body-1"
+              >
+                <span class="flex items-center"
+                  ><i class="fa-solid fa-user-check w-5 h-5 mr-2 shrink-0"></i>
+                  Validasi akun dikirim lewat apa ya kak?</span
+                >
+                <svg
+                  data-accordion-icon
+                  class="w-6 h-6 rotate-180 shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </button>
+            </h2>
+            <div
+              id="accordion-open-body-1"
+              class="hidden"
+              aria-labelledby="accordion-open-heading-1"
+            >
+              <div
+                class="p-5 font-light border border-b-0 border-primary bg-gray-900"
+              >
+                <p class="text-gray-400 font-poppins font-light text-base">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Ducimus, vero omnis? Voluptatem nemo explicabo exercitationem
+                  nobis iusto voluptate porro eaque?
+                </p>
+              </div>
+            </div>
+            <h2 id="accordion-open-heading-2">
+              <button
+                type="button"
+                class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-primary dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
+                data-accordion-target="#accordion-open-body-2"
+                aria-expanded="false"
+                aria-controls="accordion-open-body-2"
+              >
+                <span class="flex items-center"
+                  ><i class="fa-solid fa-user-shield w-5 h-5 mr-2 shrink-0"></i
+                  >Privasi kita aman ga kak di forum?</span
+                >
+                <svg
+                  data-accordion-icon
+                  class="w-6 h-6 shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </button>
+            </h2>
+            <div
+              id="accordion-open-body-2"
+              class="hidden"
+              aria-labelledby="accordion-open-heading-2"
+            >
+              <div
+                class="p-5 font-light border border-b-0 border-primary bg-gray-900"
+              >
+                <p class="text-gray-400 font-poppins font-light text-base">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero
+                  cum dolorem expedita itaque cumque. Doloremque officia quidem
+                  harum suscipit laborum.
+                </p>
+              </div>
+            </div>
+            <h2 id="accordion-open-heading-3">
+              <button
+                type="button"
+                class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-primary dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
+                data-accordion-target="#accordion-open-body-3"
+                aria-expanded="false"
+                aria-controls="accordion-open-body-3"
+              >
+                <span class="flex items-center"
+                  ><i
+                    class="fa-solid fa-book-open-reader w-5 h-5 mr-2 shrink-0"
+                  ></i>
+                  Di forum kita bisa ngapain aja?</span
+                >
+                <svg
+                  data-accordion-icon
+                  class="w-6 h-6 shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </button>
+            </h2>
+            <div
+              id="accordion-open-body-3"
+              class="hidden"
+              aria-labelledby="accordion-open-heading-3"
+            >
+              <div
+                class="p-5 font-light border border-t-0 border-primary bg-gray-900"
+              >
+                <p class="text-gray-400 font-poppins font-light text-base">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Eveniet laborum, eum nesciunt sint tenetur hic.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- faq -->
+
+    <!-- footer -->
+    <footer class="bg-slate-700 pt-24 pb-12">
+      <div class="container mx-auto">
+        <div class="flex flex-wrap justify-center">
+          <div class="w-full mx-auto px-4 mb-12 md:w-1/2">
+            <h1 class="font-sora font-bold text-primary text-2xl">MyPKTime</h1>
+            <p class="font-sora font-semibold text-slate-300 my-2 text-base">
+              Hubungi Developer
+            </p>
+            <p class="font-sora font-normal text-base text-slate-400 mb-2">
+              Jl. Pleret Raya, Sumber Banjarsari, Surakarta 57138,
+            </p>
+            <p class="font-sora font-semibold text-slate-400 mb-8">Surakarta</p>
+
+            <ul class="list-none flex items-center gap-6">
+              <li>
+                <a
+                  href="#"
+                  class="text-slate-400 w-9 h-9 p-2 border-2 border-primary rounded-full hover:bg-primary hover:text-white focus:ring-4 duration-150 ease-in"
+                  ><i class="fa-brands fa-instagram fa-xl md:mb-10"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-slate-400 w-9 h-9 p-2 border-2 border-primary rounded-full hover:bg-primary hover:text-white focus:ring-4 duration-150 ease-in"
+                  ><i class="fa-brands fa-whatsapp fa-xl md:mb-10"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-slate-400 w-9 h-9 p-2 border-2 border-primary rounded-full hover:bg-primary hover:text-white focus:ring-4 duration-150 ease-in"
+                  ><i class="fa-solid fa-blog fa-xl md:mb-10"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-slate-400 w-9 h-9 p-2 border-2 border-primary rounded-full hover:bg-primary hover:text-white focus:ring-4 duration-150 ease-in"
+                  ><i class="fa-brands fa-facebook fa-xl md:mb-10"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="w-full mx-auto px-4 mb-10 md:w-1/2 md:text-end">
+            <h2 class="font-sora font-semibold text-slate-400 text-base mb-2">
+              &copy;2023 MyPKTime.co.id
+            </h2>
+            <h1 class="font-sora font-light text-slate-400 text-sm">
+              All Rights Reserved.
+            </h1>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer -->
+
+    <!-- Custom js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
+    <!-- Custom js -->
+  </body>
+</html>
